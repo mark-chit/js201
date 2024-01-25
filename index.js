@@ -13,20 +13,56 @@
 'use strict';
 
 function id() {
+  return "UP2060197"
   // e.g. return "UP654321";
 }
 
 function fn() {
-  return 'Replace This With Your First Name';
+  return 'mork';
 }
 
 function sn() {
-  return 'Replace This With Your Surname';
+  return 'c';
 }
 
 function example() {
   // replace this example with
   // your first function then
   // add more below as necessary.
+
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b; 
+}
+
+// const obj = {
+//   checked: false
+// }
+
+function checkObject(obj) {
+  obj.checked = true;
+  
+}
+
+function checkObjectInside(obj) {
+  if (obj.data) {
+    obj.data.checked = true;
+  };
+}
+
+//Create an arraySet function that accepts three parameters `arr`, `i` and `n`. 
+//The first one is an array and the second one an index. 
+//The function should place the value of the third parameter into the array at an index specified by the second parameter, 
+//if (and only if) such an index is already in the array. Note that your function does not need to return a value because the array is modified directly. Rerun
+function arraySet(arr, i, n){
+ if (arr[i]){
+
+  arr[i] = n;
+ }
 
 }
