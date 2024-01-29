@@ -99,10 +99,68 @@ function largest(arr) {
   return arr.length > 0 ? Math.max(...arr) : null;
 }
 
+//Create a function called compare that accepts two arrays of numbers (`a` and `b`) and compares the contents. It should return true if the arrays are identical and false otherwise.
+
 function compare(a, b) {
-  if (a === b) {
-    return true;
-  } else {
+  if (a.length !== b.length) {
     return false;
   }
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] != b[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function addToAll(arr, n) {
+  for (let i = 0; i < arr.length; i++) {
+    arr.splice(i, 1, arr[i] + n);
+  }
+  return arr;
+}
+
+let remembered = null;
+function rememberThis(keepsake) {
+  remembered = keepsake;
+}
+
+function nArray(n) {
+  let array = [];
+  let count = 1;
+  while (array.length < n) {
+    array.push(count++);
+  }
+  return array;
+}
+
+function addAllOpt(arr) {
+  if (!arr || arr.length === 0) {
+    return 0;
+  }
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    count += arr[i];
+  }
+  return count;
+}
+
+function divisors(arr, div) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % div === 0) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+
+function multiples(n, m){
+  let count = 1;
+  let result = [];
+  for (let i = 0; i < n; i++){
+    result.push(count*m);
+    count++;
+  }
+  return result;
 }
